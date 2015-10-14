@@ -293,7 +293,7 @@ def compute(args):
         pass
     
     h5f = tables.openFile(args.binfolder+'/'+binfile_list[0]) # for some info
-    NODATA_value = h5f.root.NODATA_value.read()
+    NODATA_value = nodata_global #h5f.root.NODATA_value.read()
     yllcorner = h5f.root.yllcorner.read()
     xllcorner = h5f.root.xllcorner.read()
     nrows = h5f.root.nrows.read()
